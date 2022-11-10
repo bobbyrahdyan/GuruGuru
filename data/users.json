@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Alpha",
+        "email": "alpha@guru.com",
+        "password": "alpha",
+        "role": "instructor",
+        "dateOfBirth": "1985-10-10"
+    },
+    {
+        "name": "Betha",
+        "email": "Betha@guru.com",
+        "password": "betha",
+        "role": "instructor",
+        "dateOfBirth": "1988-11-10"
+    },
+    {
+        "name": "Charlie",
+        "email": "charlie@guru.com",
+        "password": "charlie",
+        "role": "student",
+        "dateOfBirth": "1997-12-10"
+    },
+    {
+        "name": "Delta",
+        "email": "delta@guru.com",
+        "password": "delta",
+        "role": "student",
+        "dateOfBirth": "1999-02-10"
+    }
+]
