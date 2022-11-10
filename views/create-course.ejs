@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            background-color: bisque;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .container a {
+            text-decoration: none;
+            padding: 10px 5px;
+        }
+
+        .container a:hover {
+            background-color: gainsboro;
+            color: orange;
+        }
+    </style>
+    <title>Add Course</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <span>GuruGuru</span>
+            <a href="/instructors">Home</a>
+            <a href="./listUsers.html">My Students</a>
+            <a href="">Logout</a>
+            <a href="">Status</a>
+        </div>
+    </div>
+
+    <form action="/instructors/<%= instructorId %>/add" method="post">
+        <p>
+            <label for="name">Title Course</label><br>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label for="duration">Duration</label><br>
+            <input type="number" name="duration">
+        </p>
+        <p>
+            <label for="description">Description</label><br>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</body>
+</html>

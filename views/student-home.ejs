@@ -51,26 +51,18 @@
         .relic p{
             width: 100%;
         }
-
-        .act{
-            text-align: center;
-            margin-bottom: 10px;
-        }
     </style>
-    <title>Home Admin</title>
+    <title>Home Student</title>
 </head>
 <body>
     <div class="navbar">
         <div class="container">
             <span>GuruGuru</span>
-            <a href="./admin.html">Home</a>
-            <a href="./listUsers.html">Users</a>
-            <a href="">My Profile</a>
+            <a href="/students/<%= userid %>">Home</a>
+            <a href="/students/courses">My Courses</a>
+            <a href="">Logout</a>
+            <a href="">Status</a>
         </div>
-    </div>
-
-    <div class="">
-        <a href=""><button>Add Course</button></a>
     </div>
 
     <div class="feature">
@@ -82,52 +74,44 @@
         </form>
     </div>
 
-    <div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Instructor</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% courses.forEach((el, index) => { %>
+                <tr>
+                    <td><%= ++index %></td>
+                    <td><%= el.name %></td>
+                    <td><%= el.durationFormat() %></td>
+                    <td><%= el.Instructor.name %></td>
+                    <td><%= currencyFormat(el.price) %></td>
+                    <td>
+                        <a href="/students/<%= userid %>/detail/<%= el.id %>"><button>Description</button></a>
+                        <a href=""><button>Enroll</button></a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <!-- <div class="card">
         <div class="relic">
             <img src="https://cdn.pixabay.com/photo/2022/01/18/07/36/cat-6946498__480.jpg" alt="">
             <span>Courses Name</span>
             <span>Duration</span>
+            <p>
+                <h4>Description</h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo repudiandae ipsa obcaecati, animi assumenda voluptates consequuntur eaque voluptatibus cupiditate non tempore nobis distinctio expedita voluptatum porro eum ducimus nihil.
+            </p>
+            <a href=""><button>Beli Course</button></a>
         </div>
-        <div class="act">
-            <a href=""><button>Edit</button></a>
-            <a href=""><button>Delete</button></a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="relic">
-            <img src="https://cdn.pixabay.com/photo/2022/06/01/09/12/duck-7235180__480.jpg" alt="">
-            <span>Courses Name</span>
-            <span>Duration</span>
-            <div class="act">
-                <a href=""><button>Edit</button></a>
-                <a href=""><button>Delete</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="relic">
-            <img src="https://cdn.pixabay.com/photo/2022/06/29/05/12/italy-7290977__480.jpg" alt="">
-            <span>Courses Name</span>
-            <span>Duration</span>
-            <div class="act">
-                <a href=""><button>Edit</button></a>
-                <a href=""><button>Delete</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="relic">
-            <img src="https://cdn.pixabay.com/photo/2022/10/31/18/44/spider-web-7560535__480.jpg" alt="">
-            <span>Courses Name</span>
-            <span>Duration</span>
-            <div class="act">
-                <a href=""><button>Edit</button></a>
-                <a href=""><button>Delete</button></a>
-            </div>
-        </div>
-    </div>
+    </div> -->
 </body>
 </html>

@@ -52,15 +52,14 @@
             width: 100%;
         }
     </style>
-    <title>Home User</title>
+    <title>Welcome!</title>
 </head>
 <body>
     <div class="navbar">
         <div class="container">
             <span>GuruGuru</span>
-            <a href="/students">Home</a>
-            <a href="./userCourses.html">My Courses</a>
-            <a href="">My Profile</a>
+            <a href="/login">Login</a>
+            <a href="/register">Sign Up</a>
         </div>
     </div>
 
@@ -89,12 +88,12 @@
                 <tr>
                     <td><%= ++index %></td>
                     <td><%= el.name %></td>
-                    <td><%= el.duration %></td>
+                    <td><%= el.durationFormat() %></td>
                     <td><%= el.Instructor.name %></td>
-                    <td><%= el.price %></td>
+                    <td><%= currencyFormat(el.price) %></td>
                     <td>
                         <a href=""><button>Description</button></a>
-                        <a href=""><button>Take</button></a>
+                        <a href=""><button>Enroll</button></a>
                     </td>
                 </tr>
             <% }) %>

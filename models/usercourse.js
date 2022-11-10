@@ -14,8 +14,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   UserCourse.init({
-    CourseId: DataTypes.INTEGER,
-    UserId: DataTypes.INTEGER
+    CourseId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Course must be filled'
+        },
+        notNull: {
+          msg: 'Course must be filled'
+        }
+      }
+    },
+    UserId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'User must be filled'
+        },
+        notNull: {
+          msg: 'User must be filled'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'UserCourse',

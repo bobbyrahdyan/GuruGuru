@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         through: models.UserCourse, as: 'Student'
       })
     }
+
+    durationFormat(){
+      return this.duration + " Bulan"
+    }
+
   }
   Course.init({
     name: DataTypes.STRING,

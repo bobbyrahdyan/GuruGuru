@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            background-color: bisque;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .container a {
+            text-decoration: none;
+            padding: 10px 5px;
+        }
+
+        .container a:hover {
+            background-color: gainsboro;
+            color: orange;
+        }
+
+        .feature{
+            margin: 10px 0;
+        }
+
+        .card{
+            max-width: 250px;
+            border: 1px solid orange;
+            border-radius: 10px;
+            margin: 5px 10px;
+            float: left;
+        }
+
+    </style>
+    <title>Home Admin</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <span>GuruGuru</span>
+            <a href="/instructors">Home</a>
+            <a href="./listUsers.html">My Students</a>
+            <a href="">Logout</a>
+            <a href="">Status</a>
+        </div>
+    </div>
+
+    <div class="">
+        <a href="/instructors/<%= instructorId %>/add"><button>Add Course</button></a>
+    </div>
+
+    <div class="feature">
+        <form action="" class="get">
+            <select name="search" id="">
+                <option value="" disabled selected>-- ??? --</option>
+            </select>
+            <button>Search</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% courses.forEach((el, index) => { %>
+                <tr>
+                    <td><%= ++index %></td>
+                    <td><%= el.name %></td>
+                    <td><%= el.durationFormat() %></td>
+                    <td><%= currencyFormat(el.price) %></td>
+                    <td>
+                        <a href=""><button>Description</button></a>
+                        <a href=""><button>Delete</button></a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <!-- <div class="card">
+        <div class="relic">
+            <img src="https://cdn.pixabay.com/photo/2022/01/18/07/36/cat-6946498__480.jpg" alt="">
+            <span>Courses Name</span>
+            <span>Duration</span>
+        </div>
+        <div class="act">
+            <a href=""><button>Edit</button></a>
+            <a href=""><button>Delete</button></a>
+        </div>
+    </div> -->
+</html>
