@@ -2,11 +2,10 @@ const {User, Course, CourseDetail, UserCourse} = require('../models')
 
 class Controller{
     static students(req, res){
-        User.findAll({where: {
-            role: 'student'
-        }, inlcude: Course})
-        .then(students => {
-            res.send(students)
+        User.findAll({include: ['InstructorCourses', 'StudentCourses']})
+        .then(courses => {
+            res.send(courses)
+            // res.render('studentHome', {courses})
         })
         .catch(err => res.send(err))
     }

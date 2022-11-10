@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Grammar",
+        "duration": 3,
+        "InstructorId": 2,
+        "price": 500000
+    },
+    {
+        "name": "Speaking",
+        "duration": 2,
+        "InstructorId": 1,
+        "price": 500000
+    },
+    {
+        "name": "Calistung",
+        "duration": 1,
+        "InstructorId": 1,
+        "price": 200000
+    },
+    {
+        "name": "Coding Kids",
+        "duration": 4,
+        "InstructorId": 2,
+        "price": 1000000
+    },
+    {
+        "name": "Debugging",
+        "duration": 2,
+        "InstructorId": 2,
+        "price": 800000
+    }
+]
