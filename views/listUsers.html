@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            background-color: bisque;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .container a {
+            text-decoration: none;
+            padding: 10px 5px;
+        }
+
+        .container a:hover {
+            background-color: gainsboro;
+            color: orange;
+        }
+
+        .feature{
+            margin: 10px 0;
+        }
+
+        .card{
+            max-width: 250px;
+            border: 1px solid orange;
+            border-radius: 10px;
+            margin: 5px 10px;
+            float: left;
+        }
+
+        .relic{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .relic img{
+            width: 0 30%;
+            border-radius: 10px;
+        }
+
+        .relic span{
+            margin-top: 5px;
+        }
+
+        .relic p{
+            width: 100%;
+        }
+
+        .act{
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+    <title>List User</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <span>GuruGuru</span>
+            <a href="./admin.html">Home</a>
+            <a href="./listUsers.html">Users</a>
+            <a href="">My Profile</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="relic">
+            <img src="https://cdn.pixabay.com/photo/2017/07/08/16/06/one-piece-2484804__480.jpg" alt="">
+            <span>Luffy D. Monkey</span>
+            <span>Join Nov 10th 2022</span>
+        </div>
+        <div class="act">
+            <a href=""><button>Detail</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="relic">
+            <img src="https://cdn.pixabay.com/photo/2018/10/08/01/05/male-3731782__480.jpg" alt="">
+            <span>Vinsmoke Sanji</span>
+            <span>Join Nov 10th 2022</span>
+            <div class="act">
+                <a href=""><button>Detail</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="relic">
+            <img src="https://cdn.pixabay.com/photo/2018/10/01/00/46/male-3715098__480.jpg" alt="">
+            <span>Rorona Zoro</span>
+            <span>Join Nov 10th 2022</span>
+            <div class="act">
+                <a href=""><button>Detail</button></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
