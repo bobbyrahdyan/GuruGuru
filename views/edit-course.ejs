@@ -39,25 +39,25 @@
         <% }) %>
     <% } %>
 
-    <form action="/instructors/<%= instructorId %>/add" method="post">
+    <form action="/instructors/<%= instructorId %>/edit/<%= course.id %>" method="post">
         <p>
             <label for="name">Title Course</label><br>
-            <input type="text" name="name">
+            <input type="text" name="name" value="<%= course.name %>">
         </p>
         <p>
             <label for="duration">Duration</label><br>
-            <input type="number" name="duration">
+            <input type="number" name="duration" value="<%= course.duration %>">
         </p>
         <p>
             <label for="price">Price</label><br>
-            <input type="number" name="price">
+            <input type="number" name="price" value="<%= course.price %>">
         </p>
-        <p>
+        <p> 
             <label for="description">Description</label><br>
-            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <textarea name="description" id="" cols="30" rows="10"><%= description.description %></textarea>
         </p>
         <p>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Update">
         </p>
     </form>
 </body>

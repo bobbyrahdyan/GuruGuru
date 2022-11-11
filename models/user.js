@@ -18,6 +18,12 @@ module.exports = (sequelize, DataTypes) => {
         through: models.UserCourse, as: 'StudentCourses'
       })
     }
+
+    // static age(){
+    //   let yearBirth = new Date(this.dateOfBirth).toLocaleString('id-ID', {year: 'numeric'})
+    //   let yearNow = new Date().toLocaleString('id-ID', {year: 'numeric'})
+    //   return Number(yearNow) - Number(yearBirth)
+    // }
   }
   User.init({
     name: {

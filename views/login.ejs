@@ -7,6 +7,11 @@
     <title>Login</title>
 </head>
 <body>
+  <% if(errors){ %>
+    <% errors.split(',').forEach(el => { %>
+        <p style="color: red;"><%= el %></p>
+    <% }) %>
+  <% } %>
     <form action="/login" method="post">
         <h1>Please sign in</h1>
 

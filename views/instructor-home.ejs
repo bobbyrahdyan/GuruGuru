@@ -40,10 +40,9 @@
     <div class="navbar">
         <div class="container">
             <span>GuruGuru</span>
-            <a href="/instructors">Home</a>
-            <a href="./listUsers.html">My Students</a>
-            <a href="">Logout</a>
-            <a href="">Status</a>
+            <a href="/instructors/<%= instructorId %>">Home</a>
+            <a href="/instructors/<%= instructorId %>/list">My Students</a>
+            <a href="/logout">Logout</a>
         </div>
     </div>
 
@@ -78,8 +77,8 @@
                     <td><%= el.durationFormat() %></td>
                     <td><%= currencyFormat(el.price) %></td>
                     <td>
-                        <a href=""><button>Description</button></a>
-                        <a href=""><button>Delete</button></a>
+                        <a href="/instructors/<%= instructorId %>/detail/<%= el.id %>"><button>Description</button></a>
+                        <a href="/instructors/<%= instructorId %>/delete/<%= el.id %>"><button>Delete</button></a>
                     </td>
                 </tr>
             <% }) %>

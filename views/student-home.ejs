@@ -33,24 +33,6 @@
             float: left;
         }
 
-        .relic{
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .relic img{
-            width: 0 30%;
-            border-radius: 10px;
-        }
-
-        .relic span{
-            margin-top: 5px;
-        }
-
-        .relic p{
-            width: 100%;
-        }
     </style>
     <title>Home Student</title>
 </head>
@@ -58,20 +40,19 @@
     <div class="navbar">
         <div class="container">
             <span>GuruGuru</span>
-            <a href="/students/<%= userid %>">Home</a>
-            <a href="/students/courses">My Courses</a>
-            <a href="">Logout</a>
-            <a href="">Status</a>
+            <a href="/students/<%= studentId %>">Home</a>
+            <a href="/students/<%= studentId %>/courses">My Courses</a>
+            <a href="/logout">Logout</a>
         </div>
     </div>
 
     <div class="feature">
-        <form action="" class="get">
-            <select name="search" id="">
-                <option value="" disabled selected>-- ??? --</option>
-            </select>
-            <button>Search</button>
-        </form>
+        <div class="feature">
+            <form action="/" method="get">
+                <input type="search" name="search" placeholder="Search Courses By Title">
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </div>
 
     <table>
@@ -94,24 +75,12 @@
                     <td><%= el.Instructor.name %></td>
                     <td><%= currencyFormat(el.price) %></td>
                     <td>
-                        <a href="/students/<%= userid %>/detail/<%= el.id %>"><button>Description</button></a>
-                        <a href=""><button>Enroll</button></a>
+                        <a href="/students/<%= studentId %>/detail/<%= el.id %>"><button>Description</button></a>
+                        <a href="/students/<%= studentId %>/enroll/<%= el.id %>"><button>Enroll</button></a>
                     </td>
                 </tr>
             <% }) %>
         </tbody>
     </table>
-    <!-- <div class="card">
-        <div class="relic">
-            <img src="https://cdn.pixabay.com/photo/2022/01/18/07/36/cat-6946498__480.jpg" alt="">
-            <span>Courses Name</span>
-            <span>Duration</span>
-            <p>
-                <h4>Description</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo repudiandae ipsa obcaecati, animi assumenda voluptates consequuntur eaque voluptatibus cupiditate non tempore nobis distinctio expedita voluptatum porro eum ducimus nihil.
-            </p>
-            <a href=""><button>Beli Course</button></a>
-        </div>
-    </div> -->
 </body>
 </html>

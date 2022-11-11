@@ -23,10 +23,56 @@ module.exports = (sequelize, DataTypes) => {
 
   }
   Course.init({
-    name: DataTypes.STRING,
-    duration: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Name of Course is Required'
+        }, 
+        notEmpty: {
+          msg: 'Name of Course is Required'
+        }
+      }
+    },
+    duration: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Duration is Required'
+        }, 
+        notEmpty: {
+          msg: 'Duration is Required'
+        },
+        min: {
+          args: 1,
+          msg: 'Duration Minimum is 1 Month'
+        },
+        max: {
+          args: 6,
+          msg: 'Duration Maximum is 6 Month'
+        }
+      }
+    },
     InstructorId: DataTypes.INTEGER,
-    price: DataTypes.INTEGER
+      
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Price Course is Required'
+        }, 
+        notEmpty: {
+          msg: 'Price of Course is Required'
+        },
+        min: {
+          args: 100000,
+          msg: 'Minimum Price is Rp 100.000'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Course',

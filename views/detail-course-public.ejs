@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            background-color: bisque;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .container a {
+            text-decoration: none;
+            padding: 10px 5px;
+        }
+
+        .container a:hover {
+            background-color: gainsboro;
+            color: orange;
+        }
+
+        .feature{
+            margin: 10px 0;
+        }
+
+    </style>
+    <title>Description</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <span>GuruGuru</span>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/register">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="relic">
+            <h2><%= course.name %></h2>
+            <span>By: <%= course.Instructor.name %></span>
+            <h4>Masa Belajar <%= course.durationFormat() %></h4>
+            <p>
+                <h4>Description</h4>
+                <%= detail.description %>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+
+  <% if(errors){ %>
+    <% errors.split(',').forEach(el => { %>
+        <p style="color: red;"><%= el %></p>
+    <% }) %>
+  <% } %>
+
     <h2>Register</h2>
     <hr>
     <form action="/register" method="post">
